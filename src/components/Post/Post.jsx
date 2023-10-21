@@ -7,10 +7,14 @@ const Post = ({ userId }) => {
     const [selectedPost, setSelectedPost] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then((response) => {
-            const posts = response.data;
-            setPost(posts);
-        });
+        try {
+            axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then((response) => {
+                const posts = response.data;
+                setPost(posts);
+            });
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
     }, []);
 
     const openPostModal = (post) => {

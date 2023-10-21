@@ -33,6 +33,8 @@ const UserProfile = () => {
         axios.get('http://worldtimeapi.org/api/timezone').then((response) => {
             const countries = response.data;
             setCountry(countries);
+        }).catch((error) => {
+            console.error('Error fetching current time:', error);
         });
         if (isClockRunning) {
             intervalId = setInterval(updateClock, 1000);
