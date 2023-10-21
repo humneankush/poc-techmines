@@ -1,0 +1,78 @@
+.country-detail {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e0f2f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.select-country {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #007bff;
+}
+
+.clock {
+    font-size: 24px;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-size: 28px;
+    color: #007bff;
+}
+
+.profile-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.profile-detail span {
+    width: 48%;
+}
+
+#name {
+    font-weight: bold;
+    color: #333;
+}
+
+#address {
+    color: #555;
+}
+
+
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile-detail span {
+        width: 30%;
+    }
+}
